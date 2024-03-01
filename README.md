@@ -1,4 +1,9 @@
-# MachineLearning_Foundations
-**Machine Learning** Foundations: A Ground-Up Approach @ stanCode
-> [!NOTE]
-> For this project, I built a machine learning model right from scratch. I did not use any of the ready-made machine learning libraries or frameworks, in order to get to grips with the basics of machine learning. I wanted to understand every little detail about how you train and test these models. So, I handled almost everything manually, from designing the model to processing the data. This hands-on approach helped me learn a lot about the algorithms and techniques that are at the heart of machine learning. It was all about diving deep into the fundamentals and seeing what makes these models tick.
+# Text Review Sentiment Analysis
+
+## Overview
+This repository showcases an interactive machine learning project for predicting the sentiment of text reviews. It encompasses a comprehensive workflow, including data preprocessing, feature extraction, model training, and an interactive console application for real-time predictions.
+
+## Features
+- **Feature Extraction**: Implements advanced text processing techniques to convert text data into a format suitable for machine learning models.
+- **Model Training**: Details the use of machine learning algorithms to train a sentiment analysis model on text data.
+- **Interactive Prediction**: Provides a Python script for real-time sentiment prediction of user input reviews through the console, enhancing user engagement and demonstrating the model's practical application.
