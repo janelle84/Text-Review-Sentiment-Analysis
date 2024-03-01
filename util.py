@@ -1,8 +1,6 @@
 import sys
 
-
-############################################################
-# Milestone 3b: increment dict values 
+# Increment dict values 
 
 def increment(d1, scale, d2):
     """
@@ -14,9 +12,7 @@ def increment(d1, scale, d2):
     for key, value in d2.items():
         d1[key] = d1.get(key, 0) + value * scale
 
-
-############################################################
-# Milestone 3c: dot product of 2 sparse vectors
+# Dot product of 2 sparse vectors
 
 def dotProduct(d1, d2):
     """
@@ -42,10 +38,7 @@ def readExamples(path):
     print('Read %d examples from %s' % (len(examples), path))
     return examples
 
-
-############################################################
-# Milestone 5: evaluate on trainExamples and validationExamples at the end of each training epoch
-
+# Evaluate on trainExamples and validationExamples at the end of each training epoch
 
 def evaluatePredictor(examples, predictor):
     """
@@ -110,10 +103,7 @@ def outputErrorAnalysis(examples, featureExtractor, weights, path):
         verbosePredict(featureExtractor(x), y, weights, out)
     out.close()
 
-
-############################################################
-# Milestone 5: you will incorporate the following function into your code in interactive.py
-
+# Incorporate the following function into code in interactive.py
 
 def interactivePrompt(featureExtractor, weights):
     """
