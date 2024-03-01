@@ -1,6 +1,5 @@
 """
 File: interactive.py
-Name: Janelle Lin
 ------------------------
 This file uses the function interactivePrompt
 from util.py to predict the reviews input by 
