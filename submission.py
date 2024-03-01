@@ -11,9 +11,7 @@ FeatureVector = Dict[str, int]
 WeightVector = Dict[str, float]
 Example = Tuple[FeatureVector, int]
 
-
-############################################################
-# Milestone 3a: feature extraction
+# Feature extraction
 
 def extractWordFeatures(x: str) -> FeatureVector:
     """
@@ -28,8 +26,7 @@ def extractWordFeatures(x: str) -> FeatureVector:
         feature_vector[word] += 1
     return dict(feature_vector)
 
-############################################################
-# Milestone 4: Sentiment Classification
+# Sentiment Classification
 
 def learnPredictor(trainExamples: List[Tuple[Any, int]], validationExamples: List[Tuple[Any, int]],
                    featureExtractor: Callable[[str], FeatureVector], numEpochs: int, alpha: float) -> WeightVector:
@@ -38,12 +35,6 @@ def learnPredictor(trainExamples: List[Tuple[Any, int]], validationExamples: Lis
     pairs), a |featureExtractor| to apply to x, and the number of epochs to
     train |numEpochs|, the step size |eta|, return the weight vector (sparse
     feature vector) learned.
-
-    You should implement gradient descent.
-    Note: only use the trainExamples for training!
-    You should call evaluatePredictor() on both trainExamples and validationExamples
-    to see how you're doing as you learn after each epoch. Note also that the
-    identity function may be used as the featureExtractor function during testing.
     """
     def predictor(x: str):
         return 1 if dotProduct(extractWordFeatures(x), weights) >= 0 else -1
@@ -61,9 +52,7 @@ def learnPredictor(trainExamples: List[Tuple[Any, int]], validationExamples: Lis
 
     return weights
 
-
-############################################################
-# Milestone 5a: generate test case
+# Generate test case
 
 def generateDataset(numExamples: int, weights: WeightVector) -> List[Example]:
     """
@@ -89,9 +78,7 @@ def generateDataset(numExamples: int, weights: WeightVector) -> List[Example]:
 
     return [generateExample() for _ in range(numExamples)]
 
-
-############################################################
-# Milestone 5b: character features
+# Extract character features
 
 def extractCharacterFeatures(n: int) -> Callable[[str], FeatureVector]:
     """
@@ -112,8 +99,6 @@ def extractCharacterFeatures(n: int) -> Callable[[str], FeatureVector]:
 
     return extract
 
-
-############################################################
 # Problem 3f: 
 def testValuesOfN(n: int):
     """
